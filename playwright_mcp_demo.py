@@ -10,7 +10,9 @@ from agents.mcp import MCPServerStdio
 
 async def run(agent, mcp_servers):
     print(f"\nRunning agent with servers: {[s.name for s in mcp_servers]}")
-    prompt = "Open example.com, extract the page title, and return it."
+    # Read prompt from markdown file
+    with open("playwright_mcp_demo.md", "r", encoding="utf-8") as f:
+        prompt = f.read()
     result = await Runner.run(starting_agent=agent, input=prompt)
     print("Result:", result.final_output)
 

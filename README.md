@@ -35,4 +35,15 @@ Create a file named `.env` in the project root with your OpenAI API key:
 ```
 OPENAI_API_KEY=your-key-here
 ```
-````
+
+## Modifying the Prompt
+
+The agent prompt is read from the markdown file `playwright_mcp_demo.md` in the project root. To change the agent's instructions, simply edit the contents of this file.
+
+For example, open `playwright_mcp_demo.md` and update the text:
+
+```
+Open example.com, extract the page title, and return it.
+```
+
+You can write any instructions you want the agent to follow. Save the file and re-run the demo script to use your new prompt.
