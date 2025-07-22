@@ -22,6 +22,17 @@ npx playwright install
 # 6. (Optional) Remove OPENAI_API_KEY from environment for a clean start
 Remove-Item Env:OPENAI_API_KEY
 
-# 7. Run the demo
+# 7. Run Playwright MCP server in a separate terminal
+npx @playwright/mcp
+
+# 8. Run the demo
 python playwright_mcp_demo.py
+
+
+# .env setup
+Create a file named `.env` in the project root with your OpenAI API key:
+
 ```
+OPENAI_API_KEY=your-key-here
+```
+````
